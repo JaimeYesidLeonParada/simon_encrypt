@@ -6,11 +6,22 @@ def encrypt(value: int, key: int) -> int:
     keys = _list_of_keys_for(key)
 
     for r_key in keys:
-        print("Value:", hex(round0))
         l0, r0 = _round_of_encryption(round0, r_key)
         round0 = (l0 << 16) | (r0)
         
     return round0
+
+def decrypt(value: int, key: int) -> int:
+    round0 = value & 0xFFFFFFFF
+    ls0, rs0 = split_32bit_to_16bit(round0)
+    round0 = (rs0 << 16) | (ls0)
+    keys = _list_of_keys_for(key)
+    
+    for r_key in reversed(keys):
+        l0, r0 = _round_of_encryption(round0, r_key)
+        round0 = (l0 << 16) | (r0)
+        
+    return round0 
 
 def _list_of_keys_for(key: int) -> list:
     key_64bits = key & 0xFFFFFFFFFFFFFFFF
