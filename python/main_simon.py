@@ -7,7 +7,7 @@ temperature_encrypted = simon.encrypt(temperature, key_64bits)
 print("Temperature crypted: ", hex(temperature_encrypted))
 
 
-temperature_decrypt = simon.decrypt(temperature_encrypted, key_64bits)
+temperature_decrypt = simon.decipher(temperature_encrypted, key_64bits)
 print("Temperature decrypted: ", hex(temperature_decrypt))
 
 # Temperature crypted:  0xa2_8a_a9_32
