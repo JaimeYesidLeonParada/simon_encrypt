@@ -59,6 +59,9 @@ def decipher(value: int, key: int) -> int:
         
         # Combinar las mitades izquierda y derecha en un solo valor de 32 bits
         round0 = (l0 << 16) | (r0)
+    else :
+        ls0, rs0 = split_32bit_to_16bit(round0)
+        round0 = (rs0 << 16) | (ls0)
     
     # Devolver el valor desencriptado final
     return round0 

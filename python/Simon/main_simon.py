@@ -1,6 +1,6 @@
 import simon
 
-temperature = 0x00FF00FF  #16711935
+temperature = 0x00123  #16711935
 key_64bits = 0x0123456789ABCDEF
 
 temperature_encrypted = simon.encrypt(temperature, key_64bits)
