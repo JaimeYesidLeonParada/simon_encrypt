@@ -17,4 +17,6 @@ Links of interest:
 
 - Link to connect the sensor of temperatura DS18b20: https://carlini.es/sensor-de-temperatura-ds18b20-en-la-raspberry-pi/
 
+- Link to configure mosquitto bróker: http://www.steves-internet-guide.com/mossquitto-conf-file/
+
  
